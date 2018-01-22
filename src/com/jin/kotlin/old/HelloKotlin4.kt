@@ -1,4 +1,4 @@
-package com.jin.kotlin
+package com.jin.kotlin.old
 
 fun main(args: Array<String>) {
     var i = convert2Int("bb")

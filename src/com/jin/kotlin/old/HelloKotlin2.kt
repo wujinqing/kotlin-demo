@@ -1,9 +1,9 @@
-package com.jin.kotlin
+package com.jin.kotlin.old
 
 //import com.jin.kotlin.lesson01.multiply
 
 // 别名的方式导入
-import com.jin.kotlin.lesson01.multiply as myMultiply
+import com.jin.kotlin.old.lesson01.multiply as myMultiply
 
 fun main(args: Array<String>) {
     //定义一个常量

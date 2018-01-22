@@ -1,4 +1,4 @@
-package com.jin.kotlin.demo01
+package com.jin.kotlin.old.demo01
 
 import java.util.function.Consumer
 
