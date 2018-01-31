@@ -40,6 +40,11 @@ fun main(args: Array<String>) {
 
     myPrint2(Parent1())
     myPrint2(Child1())
+
+    println("-------------------------------")
+
+    CC().foo()
+    CC().foo(2)
 }
 
 // 扩展函数的解析是静态的， 并不会对原有的类进行任何修改（即不会将新方法的字节码插入到原有类中）
@@ -50,6 +55,7 @@ fun main(args: Array<String>) {
 2. 扩展函数的解析是静态分发的，而不是动态的，即不支持多态，调用只取决于对象的声明类型。
 3. 调用是由对象声明类型所决定的，而不是由对象的实际类型决定。
 
+如果扩展方法和类里面的原有方法签名一样， 则会调用类里面原有的方法
  */
 
 open class AA
@@ -77,4 +83,31 @@ class Child1: Parent1()
 fun myPrint2(aa: Parent1)
 {
     println(aa.a())
+}
+
+class CC {
+    fun foo()
+    {
+        println("member")
+    }
+}
+
+fun CC.foo()
+{
+    println("member 2")
+}
+
+// 重载
+fun CC.foo(i: Int)
+{
+    println("member 3")
+}
+
+fun Any?.toString(): String {
+    if(null == this)
+    {
+        return "null"
+    }
+
+    return toString()
 }
