@@ -25,7 +25,7 @@ open class B
 }
 
 // 实现接口也用冒号，只是接口后面没有括号(因为接口是不能被实例化的)
-// 同时继承A和B的method方法，必须显示的重写
+// 同时继承A和B的method方法，必须显式的重写
 class C: A, B()
 {
     override fun method() {

@@ -62,7 +62,7 @@ class EE {
 
 fun main(args: Array<String>) {
     var dd = DD()
-//    dd.output() 不能调用， 超出了扩展函数output的作用域
+//    dd.output() //不能调用， 超出了扩展函数output的作用域
     EE().test()
 }
 
